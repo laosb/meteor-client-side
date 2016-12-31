@@ -24,6 +24,10 @@ cp src/packages $BUNDLER_PATH/.meteor/
 
 cd $BUNDLER_PATH
 
+# Install babel-runtime
+meteor npm install --save babel-runtime
+meteor npm i
+
 # Build the packages
 PACKAGE_DIRS=$PROJECT_PARENT meteor build --debug .
 tar -zxf $BUNDLER_TEMP.tar.gz
